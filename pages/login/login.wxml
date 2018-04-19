@@ -1,0 +1,19 @@
+<view class='login-container'>
+  <view class="tishi">
+    <text>【注】: 密码为教务网密码  暂未提供解绑功能</text>
+  </view>
+  <image src='../images/cqjtu.jpg' class='logo'></image>
+  <text class='sign'>教务网绑定</text>
+  <view class="fom">
+    <form bindsubmit='submit'>
+      <input name="xh" placeholder='请输入学号' type='number' maxlength="12"></input>
+      <input name="mm" placeholder='请输入密码' password='true'></input>
+      <text class='tip'>{{tips}}</text>
+      <button form-type='submit' type='primary'>登 录</button>
+    </form>
+  </view>
+  <view class="myfooter">
+    <text style='color:#586C94;font-size:14px;font-family:STXingkai'>Hello World\n</text>
+    <text style="font-size:12px;">Copyright © 2017-2018 kevin</text>
+  </view>
+</view>

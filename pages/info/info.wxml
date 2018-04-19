@@ -1,0 +1,15 @@
+<view class='info-container'>
+  <!--头像区域开始-->
+  <view class='tx'>
+    <image src="{{txurl}}"></image>
+    <text>{{nickname}}</text>
+  </view>
+  <!--头像区域结束-->
+
+  <!--设置开始-->
+  <view class="set"><image src='../images/sc.png'></image><text>我的收藏</text></view>
+  <view class="set"><image src='../images/quan.png'></image><text>我的校圈</text></view>
+  <view class="set"><image src='../images/wp.png'></image><text>我的闲置</text></view>
+  <view class="set" bindtap='yijian'><image src='../images/yj.png'></image><text>意见反馈</text></view>
+  <view class="set" bindtap='about'><image src='../images/user.png'></image><text>关于我们</text></view>
+</view>

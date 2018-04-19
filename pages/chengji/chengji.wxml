@@ -1,0 +1,34 @@
+<view class="main-container">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{items}}" range-key="xqmc" bindchange="change">
+    <view class="picker">
+      <view class='title'>
+        <text>选择学期</text>
+      </view>
+      <view class='content'>{{items[index].xqmc}}</view>
+    </view>
+  </picker>
+
+  <!--具体的成绩-->
+  <view class='chengji'>
+    <view class="wcj">
+      <view class='content'>
+        <view>科目数</view>
+        <view>{{chengji.length}}</view>
+      </view>
+      <view class='content'>
+        <view>平均绩点</view>
+        <view>{{jidian}}</view>
+      </view>
+    </view>
+    <view class='cheng' wx:for="{{chengji}}" wx:key="kcmc">
+      <view class='left'>
+        <text class='name'>{{item.kcmc}}\n</text>
+        <text class='detail'>学年学期:{{item.xqmc}}\n课程属性:{{item.kclbmc}}\n考试性质:{{item.ksxzmc}}\n课程性质:{{item.kcxzmc}}</text>
+      </view>
+      <view class='right'>
+        <text class='score'>{{item.zcj}}\n</text>
+        <text class='credit'>学分:{{item.xf}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+page {
+  background-color: #f2f2f2;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-container textarea {
+  border-radius: 6px;
+  width: 84%;
+  margin-top: 50rpx;
+  background-color: white;
+  height: 400rpx;
+  padding: 3%;
+  font-size: 34rpx;
+  font-family: 'FangSong'
+}
+
+.main-container button {
+  width: 90%;
+  height: 90rpx;
+  margin-top: 40rpx;
+  line-height: 90rpx;
+  font-size: 34rpx;
+}
+.tips{
+  font-size: 25rpx;
+  color: #999;
+  width:80%;
+  height: 100rpx;
+  text-align: center;
+  margin-top: 160rpx;
+}

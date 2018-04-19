@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/error/error",
+    "pages/info/info",
+    "pages/quan/quan",
+    "pages/chengji/chengji",
+    "pages/jiaoshi/jiaoshi",
+    "pages/result/result",
+    "pages/yijian/yijian",
+    "pages/about/about"
+
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#7bc2e9",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "we-cqjtu",
+    "backgroundColor": "#ffffff",
+    "color": "#ffffff",
+    "backgroundTextStyle": "",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#5EB6E5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/index.png",
+        "selectedIconPath": "pages/images/index2.png"
+      },
+      {
+        "pagePath": "pages/quan/quan",
+        "text": "校园圈",
+        "iconPath": "pages/images/quan.png",
+        "selectedIconPath": "pages/images/quan2.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "我的",
+        "iconPath": "pages/images/user.png",
+        "selectedIconPath": "pages/images/user2.png"
+      }
+    ]
+  }
+}

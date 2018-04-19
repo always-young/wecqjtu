@@ -1,0 +1,49 @@
+<wxs module="util" src="../../util/utils.wxs" />
+<view class='main-container'>
+  <view class="tishi">
+    <text>【注】: 左右滑动切换今明日  下拉可刷新课表信息</text>
+  </view>
+  <swiper  circular="true" style="height:{{swipheight}}" duration='500'>
+    <swiper-item>
+      <view class="ke">今日课表</view>
+      <view class="ks" wx:if="{{today.length==0}}">今日无课程安排</view>
+      <view class='main'>
+        <view class='con' wx:for="{{today}}">
+          <image src='https://www.kevinproject.cn/aa.png'></image>
+          <view>
+            <text>{{item.time}}\n{{util.subStr(item.name,10,false)}}\n<text class='js'>{{item.address}}</text></text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="ke">明日课表</view>
+      <view class="ks" wx:if="{{tomarrow.length==0}}">明日无课程安排</view>
+      <view class='main'>
+        <view class='con' wx:for="{{tomarrow}}">
+          <image src='https://www.kevinproject.cn/aa.png'></image>
+          <view>
+            <text>{{item.time}}\n{{util.subStr(item.name,10,false)}}\n<text class='js'>{{item.address}}</text></text>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class='btns'>
+    <view class='gz long' bindtap='chengji'>
+      <text>成绩查询</text>
+    </view>
+    <view class='gz small' bindtap='kongjioashi'>
+      <text>空教室</text>
+    </view>
+    <view class='gz medal' style="margin-left:1%" bindtap='tiaozhao'>
+      <text>跳蚤市场</text>
+    </view>
+    <view class='gz medal' bindtap='biaobaiqiang'>
+      <text>表白墙</text>
+    </view>
+    <view class='gz small' style="margin-left:1%" bindtap='shiwuzhaoling'>
+      <text>失物招领</text>
+    </view>
+  </view>
+</view>

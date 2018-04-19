@@ -1,0 +1,8 @@
+<view class="main-container">
+    <view class='top'><text>WE-CQJTU</text></view>
+    <view class='bottom'><text>富强  民主  文明 和谐\n自由   平等 公正   法制\n爱国   敬业 诚信   友善</text></view>
+     <view class="myfooter">
+    <text style='color:white;font-size:14px;font-family:STXingkai'>Hello World\n</text>
+    <text style="font-size:12px;color:white;">Copyright © 2017-2018 kevin</text>
+  </view>
+</view>

@@ -1,0 +1,113 @@
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+picker {
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+}
+
+.picker {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+}
+
+.picker .title {
+  width: 30%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border-right: 1px solid #dcdcdc;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.picker .content {
+  width: 69%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: red;
+  font-size: 35rpx;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.chengji {
+  width: 100%;
+  flex-direction: column;
+  margin-top: 80rpx;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.chengji .cheng {
+  width: 100%;
+  height: 270rpx;
+  display: flex;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.chengji .cheng .left {
+  width: 76%;
+  margin-left: 4%;
+}
+
+.chengji .cheng .left .detail {
+  font-size: 25rpx;
+  color: #666;
+}
+
+.chengji .cheng .left .name {
+  font-size: 34rpx;
+}
+
+.chengji .cheng .right {
+  width: 20%;
+}
+
+.chengji .cheng .right .score {
+  color: #7bc2e9;
+  font-size: 50rpx;
+}
+
+.chengji .cheng .right .credit {
+  font-size: 25rpx;
+  color: #666;
+}
+
+.chengji .wcj {
+  text-align: center;
+  color: red;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dcdcdc
+}
+
+.chengji .wcj .content {
+  width: 49%;
+  height: 80rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chengji .wcj .content view {
+  width: 49%;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}

@@ -1,0 +1,16 @@
+<wxs module="util" src="../../util/utils.wxs" />
+<view class="main-container">
+  <!--具体的成绩-->
+  <view class='chengji'>
+    <view class="wcj" wx:if="{{jxls.length==0}}">未找到空教室</view>
+    <view class='cheng' wx:for="{{jxls[0].jsList}}" wx:key="jsid">
+      <view class='left'>
+        <text class='name'>{{util.subStr(item.jsmc,10,false)}}\n</text>
+        <text class='detail'>校区:{{item.xqmc}}\n教学楼:{{item.jzwmc}}</text>
+      </view>
+      <view class='right'>
+        <text class='score'>{{item.zws}}座\n</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="main-container">
+  <textarea placeholder="输入你的意见或者建议" maxlength='100'  adjust-position='false' value='{{value}}' bindinput="valuechange">
+  </textarea>
+  <text style='font-size:25rpx;color:red'>{{tips}}</text>
+  <button type='primary' bindtap='subYJ' disabled='{{isDis}}' loading='{{isLoading}}'>{{content}}</button>
+  <view class="tips">
+    <text>你已提交{{count}}次反馈,十分感谢你的合作\n由于服务器很慢,暂不支持上传图片,若有截图请发至QQ:1170917384\n(恶意提交会封禁账号)</text>
+  </view>
+  <view class="myfooter">
+    <text style='color:#586C94;font-size:14px;font-family:STXingkai'>Hello World\n</text>
+    <text style="font-size:12px;color:#666;">Copyright © 2017-2018 kevin</text>
+  </view>
+</view>

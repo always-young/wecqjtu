@@ -1,0 +1,27 @@
+<view class="main-container">
+  <picker bindchange="bindPickerChange" value="{{index1}}" range="{{xiaoqu}}" range-key="name" bindchange="change1">
+    <view class="picker">
+      <view class='title'>
+        <text>选择校区</text>
+      </view>
+      <view class='content'>{{xiaoqu[index1].name}}</view>
+    </view>
+  </picker>
+  <picker bindchange="bindPickerChange" value="{{index2}}" range="{{jxl}}" range-key="jzwmc" bindchange="change2">
+    <view class="picker">
+      <view class='title'>
+        <text>选择教学楼</text>
+      </view>
+      <view class='content'>{{jxl[index2].jzwmc}}</view>
+    </view>
+  </picker>
+  <picker bindchange="bindPickerChange" value="{{index3}}" range="{{times}}" range-key="name" bindchange="change3">
+    <view class="picker">
+      <view class='title'>
+        <text>选择空闲时间</text>
+      </view>
+      <view class='content'>{{times[index3].name}}</view>
+    </view>
+  </picker>
+  <button type='primary' class='search' bindtap='search'  disabled = '{{isDis}}' loading='{{loading}}'>{{content}}</button>
+</view>

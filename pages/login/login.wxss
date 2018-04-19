@@ -1,0 +1,58 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.login-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-container .tishi{
+    height: 50rpx;
+    width: 100%;
+    background-color: #FFE4C4;
+    line-height:40rpx;
+    text-align: center
+}
+.login-container .tishi text{
+  font-size: 25rpx;
+  color:#FFA07A;
+}
+.login-container .fom {
+  width: 80%;
+  margin-top: 100rpx;
+}
+
+.login-container .logo {
+  width: 140rpx;
+  height: 140rpx;
+  margin-top: 100rpx;
+}
+.login-container .sign{
+  font-size: 30rpx;
+  margin-top: 50rpx;
+  color: #666666
+}
+
+
+.login-container form {
+  width: 100%;
+}
+.login-container form input{
+  padding: 10px 10px;
+  font-size: 30rpx;
+  border: 1px solid #666666;
+  border-radius: 5px;
+  margin-top: 20rpx
+}
+.login-container form button{
+  margin-top: 40rpx;
+  font-size: 34rpx
+}
+.login-container form .tip{
+  font-size: 26rpx;
+  color: red;
+}
+
