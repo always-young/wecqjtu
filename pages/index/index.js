@@ -157,7 +157,13 @@ Page({
 
   },
   biaobaiqiang: function () {
-
+    if (app.isExist()) {
+      wx.navigateTo({
+        url: '/pages/love/love'
+      });
+    } else {
+      app.getInfo();
+    }
   },
   shiwuzhaoling: function () {
 

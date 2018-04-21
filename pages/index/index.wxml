@@ -9,7 +9,7 @@
       <view class="ks" wx:if="{{today.length==0}}">今日无课程安排</view>
       <view class='main'>
         <view class='con' wx:for="{{today}}">
-          <image src='https://www.kevinproject.cn/aa.png'></image>
+          <image src='../images/back.png'></image>
           <view>
             <text>{{item.time}}\n{{util.subStr(item.name,10,false)}}\n<text class='js'>{{item.address}}</text></text>
           </view>
@@ -21,7 +21,7 @@
       <view class="ks" wx:if="{{tomarrow.length==0}}">明日无课程安排</view>
       <view class='main'>
         <view class='con' wx:for="{{tomarrow}}">
-          <image src='https://www.kevinproject.cn/aa.png'></image>
+          <image src='../images/back.png'></image>
           <view>
             <text>{{item.time}}\n{{util.subStr(item.name,10,false)}}\n<text class='js'>{{item.address}}</text></text>
           </view>

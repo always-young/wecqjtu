@@ -1,0 +1,58 @@
+<view class="main-container">
+  <view class="header">
+    <image src='../images/heart.png'></image>
+    <image src='../images/heart.png'></image>
+    <image src='../images/heart.png'></image>
+  </view>
+  <view class='content'>
+    <view class='love' wx:for="{{biaobais}}" wx:if="{{(id==2||item.type==id)&&!showlove}}">
+      <view class="{{item.type==0?'top nm':item.sex==1 ? 'top boy': 'top girl'}}">
+        <view class="title">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view class='bottom'>
+        <view class="tx">
+          <image src='http://localhost/mous.jpg' wx:if="{{item.txurl.length==0}}"></image>
+          <image src='{{item.txurl}}' wx:else></image>
+        </view>
+        <view class="time">
+          <text>{{item.nickname}}\n{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="showlove" wx:if="{{showlove}}">
+      <textarea placeholder="你想说的话" maxlength='80' adjust-position='false'  bindinput="contentChange">
+
+      </textarea>
+      <view class="sex">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio">
+            <radio value="0" checked="true" color="#faa7b9" />汉纸
+          </label>
+          <label class="radio">
+            <radio value="1" color="#faa7b9" />妹纸
+          </label>
+        </radio-group>
+      </view>
+      <view class="sex">
+        <switch type="switch" color='#faa7b9' bindchange='nmChange'>是否匿名</switch>
+      </view>
+      <button  hover-class='none' loading='{{isLoading}}' bindtap='submitLove'>发布表白</button>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="{{tab1}}" bindtap='index'>
+      首页
+    </view>
+    <view class="{{tab2}}" bindtap='shiming'>
+      实名
+    </view>
+    <view class="{{tab3}}" bindtap='niming'>
+      匿名
+    </view>
+    <view class="{{tab4}}" bindtap='showlove'>
+      表白
+    </view>
+  </view>
+</view>

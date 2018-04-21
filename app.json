@@ -9,7 +9,8 @@
     "pages/jiaoshi/jiaoshi",
     "pages/result/result",
     "pages/yijian/yijian",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/love/love"
 
   ],
   "window": {
