@@ -153,20 +153,14 @@ Page({
       app.getInfo();
     }
   },
-  tiaozhao: function () {
-
-  },
-  biaobaiqiang: function () {
+  kaoshi:function(){
     if (app.isExist()) {
       wx.navigateTo({
-        url: '/pages/love/love'
+        url: '/pages/kaoshi/kaoshi'
       });
     } else {
       app.getInfo();
     }
-  },
-  shiwuzhaoling: function () {
-
   }
  
 })

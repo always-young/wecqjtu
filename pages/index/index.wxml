@@ -30,20 +30,15 @@
     </swiper-item>
   </swiper>
   <view class='btns'>
-    <view class='gz long' bindtap='chengji'>
+    <view class='gz medal' bindtap='chengji'>
       <text>成绩查询</text>
     </view>
     <view class='gz small' bindtap='kongjioashi'>
       <text>空教室</text>
     </view>
-    <view class='gz medal' style="margin-left:1%" bindtap='tiaozhao'>
-      <text>跳蚤市场</text>
+     <view class='gz long' style="margin-left:1%" bindtap='kaoshi'>
+      <text>考试安排</text>
     </view>
-    <view class='gz medal' bindtap='biaobaiqiang'>
-      <text>表白墙</text>
-    </view>
-    <view class='gz small' style="margin-left:1%" bindtap='shiwuzhaoling'>
-      <text>失物招领</text>
-    </view>
+    
   </view>
 </view>

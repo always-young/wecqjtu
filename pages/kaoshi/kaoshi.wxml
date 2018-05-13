@@ -1,0 +1,8 @@
+<view class='main-container'>
+    <view class="ks" wx:if="{{kebiaos.length==0}}">暂无考试安排</view>
+    <view class='kaoshi' wx:for="{{kebiaos}}">
+      <view class="top">{{item.kcmc}}</view>
+      <view class='jiaoshi'><text>{{item.jsmc}}</text></view>
+      <view class='time'><text>{{item.ksqssj}}</text></view>
+    </view>
+</view>

@@ -3,14 +3,14 @@ const app = getApp();
 
 // pages/login/login.js
 Page({
-
-  /**
+   /**
    * 页面的初始数据
    */
   data: {
     nickname: "",
     txurl: "",
-    tips: ""
+    tips: "",
+    isDis:false
   },
 
   /**
@@ -74,7 +74,7 @@ Page({
   submit: function (formdata) {
     wx.showLoading({
       title: '登录中',
-    })
+    });
     var xh = formdata.detail.value.xh;
     var mm = formdata.detail.value.mm;
     if (xh.length == 0 || mm.length == 0) {
@@ -90,7 +90,8 @@ Page({
         });
       } else {
         this.setData({
-          tips: ""
+          tips: "",
+          isDis:true
         });
         var openid = wx.getStorageSync("oid")||[];
         var self = this;
@@ -111,7 +112,8 @@ Page({
             if (code != 4) {
               wx.hideLoading();
               self.setData({
-                'tips': data
+                'tips': data,
+                isDis:false
               });
             } else {
               app.globleData.isLogin=true;

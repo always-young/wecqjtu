@@ -9,7 +9,7 @@
       <input name="xh" placeholder='请输入学号' type='number' maxlength="12"></input>
       <input name="mm" placeholder='请输入密码' password='true'></input>
       <text class='tip'>{{tips}}</text>
-      <button form-type='submit' type='primary'>登 录</button>
+      <button form-type='submit' type='primary' disabled='{{isDis}}'>登 录</button>
     </form>
   </view>
   <view class="myfooter">

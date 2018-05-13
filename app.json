@@ -10,7 +10,8 @@
     "pages/result/result",
     "pages/yijian/yijian",
     "pages/about/about",
-    "pages/love/love"
+    "pages/kaoshi/kaoshi",
+    "pages/news/news"
 
   ],
   "window": {
@@ -33,7 +34,7 @@
       },
       {
         "pagePath": "pages/quan/quan",
-        "text": "校园圈",
+        "text": "教务通知",
         "iconPath": "pages/images/quan.png",
         "selectedIconPath": "pages/images/quan2.png"
       },

@@ -1,5 +1,17 @@
 <view class='login-container'>
-  <view class="tishi">
-    <text>【注】 开发ing. . . . .</text>
+  <view class="banner">
+    <image src='../images/logo.png'></image>
   </view>
+  <view class='content'>
+    <view class='title'>
+      <text>教务通知</text>
+    </view>
+    <navigator wx:for="{{news}}" url='/pages/news/news?href={{item.href}}&title={{item.title}}&time={{item.time}}' open-type='navigate'>
+      <view class='news'>
+        <text class='neirong'>{{item.title}}\n</text>
+        <text class='time'>{{item.time}}</text>
+      </view>
+    </navigator>
+  </view>
+  <view class='caozuo' bindtap='caozuo'>{{caozuo}}</view>
 </view>

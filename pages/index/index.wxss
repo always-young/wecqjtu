@@ -88,21 +88,20 @@ page{
 
 .btns {
   width: 88%;
-  height: 330rpx;
+  height: 250rpx;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 10rpx;
   position: fixed;
-  bottom: 50rpx;
+  bottom: 70rpx;
 }
 .gz {
   height: 100rpx;
   text-align: center;
   background-color: #7bc2e9;
-  margin-top: 15rpx;
   line-height: 100rpx;
   color: white;
   font-size: 30rpx;

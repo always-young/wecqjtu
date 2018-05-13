@@ -1,0 +1,17 @@
+<view class='login-container'>
+  <view class="banner">
+    <image src='../images/logo.png'></image>
+  </view>
+  <view class='title'>
+    <text class='tt'>{{title}}\n</text>
+    <text class='time'>{{time}}</text>
+  </view>
+  <view class='content'>
+     <text>{{content}}
+     </text>  
+  </view>
+   <view class="footer">
+    <text style='color:#586C94;font-size:14px;font-family:STXingkai'>CQJTU\n</text>
+    <text style="font-size:12px;">Copyright © 2017-2018 kevin</text>
+  </view>
+</view>

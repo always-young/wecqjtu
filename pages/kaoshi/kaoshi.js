@@ -1,13 +1,13 @@
 const app = getApp();
+
+// pages/kaoshi/kaoshi.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    news: [],
-    page: 0,
-    caozuo: '加载更多'
+    kaoshis: []
   },
 
   /**
@@ -17,70 +17,53 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
-    var that = this;
-    wx.request({
-      url: app.globleData.localurl + 'getJW',
-      method: 'POST',
-      data: {
-        page: that.data.page
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        wx.hideLoading();
-        that.setData({
-          news: res.data.msg,
-          page: res.data.page
-        });
-      },
-      fail: function (err) {
-        console.log(err);
-        wx.showModal({
-          title: '错误信息',
-          content: "网络连接失败!",
-          showCancel: false
-        });
-      }
-    });
-  },
-  caozuo: function () {
-    let that = this;
-    let page = this.data.page;
-    page--;
-    if (page == 0) {
-      this.setData({
-        caozuo: "无更多数据"
-      });
+    const that = this;
+    let openid = wx.getStorageSync('oid') || [];
+    if (openid.length == 0) {
+      wx.showModal({
+        title: '错误提示',
+        content: '请重启小程序'
+      })
     } else {
       wx.request({
-        url: app.globleData.localurl + 'getJW',
-        method: 'POST',
+        url: app.globleData.localurl + 'getKS',
         data: {
-          page: page
+          'openid': openid,
         },
         header: {
           'content-type': 'application/json'
         },
+        method: 'POST',
         success: function (res) {
-          let news = that.data.news;
-          let c = news.concat(res.data.msg);
-          that.setData({
-            news: c,
-            page: page
-          });
+          if (res.data.code == 0) {
+            wx.showModal({
+              title: '错误提示',
+              content: res.data.msg
+            })
+          } else {
+            if (res.data.msg[0] == null) {
+              that.setData({
+                kebiaos: []
+              });
+            } else {
+              wx.hideLoading();
+              that.setData({
+                kebiaos: res.data.msg
+              });
+            }
+          }
         },
-        fail: function (err) {
-          console.log(err);
+        fail: function () {
           wx.showModal({
             title: '错误信息',
             content: "网络连接失败!",
             showCancel: false
-          });
+          })
         }
-      });
+      })
     }
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -50,8 +50,8 @@
       }
     },
     globleData: {
-      localurl: 'http://localhost/shenghuofuwu/public/',
-      // localurl: 'https://www.kevinproject.cn/shenghuofuwu/public/',
+      // localurl: 'http://localhost/shenghuofuwu/public/',
+      localurl: 'https://www.kevinproject.cn/shenghuofuwu/public/',
       isLogin: false
     }
     ,
@@ -88,7 +88,7 @@
                   });
                   wx.setStorageSync('info', 'success');
                 },
-                fail: function () {
+                fail: function () { 
                   wx.setStorageSync('info', 'success');
                 }
               });
